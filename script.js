@@ -14,6 +14,8 @@ function getHumanChoice(){
 
 let humanChoice = getHumanChoice();
 let computerChoice = getComputerChoice();
+let humanScore = 0;
+let computerScore = 0;
 
 function playRound(humanChoice, computerChoice){
   humanChoice = humanChoice.charAt(0).toUpperCase() + humanChoice.slice(1).toLowerCase();
@@ -23,9 +25,11 @@ function playRound(humanChoice, computerChoice){
 
     if(computerChoice == "Paper"){
       console.log(`You lose!${computerChoice} beats ${humanChoice}!`);
+      computerScore++;
     }
     else if(computerChoice == "Scissors"){
       console.log(`You Win!${humanChoice} beats ${computerChoice}!`);
+      humanScore++;
     }
     else if(computerChoice == "Rock"){
       console.log(`A Tie!You both picked ${computerChoice}!`);
@@ -35,9 +39,11 @@ function playRound(humanChoice, computerChoice){
 
     if(computerChoice == "Paper"){
       console.log(`A Tie!You both picked ${computerChoice}!`);
+      humanScore++;
     }
     else if(computerChoice == "Scissors"){
       console.log(`You lose!${computerChoice} beats ${humanChoice}!`);
+      computerScore++;
     }
     else if(computerChoice == "Rock"){
       console.log(`You Win!${humanChoice} beats ${computerChoice}!`);
@@ -47,12 +53,14 @@ function playRound(humanChoice, computerChoice){
 
     if(computerChoice == "Paper"){
       console.log(`You Win!${humanChoice} beats ${computerChoice}!`);
+      humanScore++;
     }
     else if(computerChoice == "Scissors"){
       console.log(`A Tie!You both picked ${computerChoice}!`);
     }
     else if(computerChoice == "Rock"){
       console.log(`You lose!${computerChoice} beats ${humanChoice}!`);
+      computerScore++;
     }
   }
   replayGame();
