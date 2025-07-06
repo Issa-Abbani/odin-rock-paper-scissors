@@ -11,3 +11,5 @@ function getHumanChoice(){
   return playerChoice;
 }
 
+let humanScore = getHumanChoice();
+let computerScore = getComputerChoice();
