@@ -7,6 +7,7 @@ function getHumanChoice(){
   let playerChoice;
   do{
    playerChoice = window.prompt("rock, paper, or scissors");
+   playerChoice = playerChoice.toLowerCase();
   }while(playerChoice !== "rock" &&  playerChoice !== "paper" && playerChoice !== "scissors");
   return playerChoice;
 }
