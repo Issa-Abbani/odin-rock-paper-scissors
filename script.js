@@ -82,6 +82,16 @@ function replayGame(){
     playRound(humanChoice, computerChoice);
   }else if(replayChoice == "no"){
     console.log("Game Over!");
+    console.log(`You scored ${humanScore}`);
+    console.log(`Computer scored ${computerScore}`);
+
+    if(humanScore > computerScore){
+      console.log("You win!");
+    } else if (humanScore < computerScore){
+      console.log("You lose!");
+    } else {
+      console.log("We have a TIE!");
+    }
   }
   
 }
