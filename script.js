@@ -55,5 +55,25 @@ function playRound(humanChoice, computerChoice){
       console.log(`You lose!${computerChoice} beats ${humanChoice}!`);
     }
   }
+  replayGame();
 }
 playRound(humanScore, computerScore);
+
+
+
+function replayGame(){
+  let replayChoice;
+  do{
+     replayChoice = window.prompt("Would you like to replay the game?(Yes/No)");
+     replayChoice = replayChoice.toLowerCase();
+  }while(replayChoice !== "yes" && replayChoice !== "no");
+
+  if(replayChoice === "yes"){
+    humanScore = getHumanChoice();
+    computerScore = getComputerChoice();
+    playRound(humanScore, computerScore);
+  }else if(replayChoice == "no"){
+    console.log("Game Over!");
+  }
+  
+}
