@@ -12,8 +12,8 @@ function getHumanChoice(){
   return playerChoice;
 }
 
-let humanScore = getHumanChoice();
-let computerScore = getComputerChoice();
+let humanChoice = getHumanChoice();
+let computerChoice = getComputerChoice();
 
 function playRound(humanChoice, computerChoice){
   humanChoice = humanChoice.charAt(0).toUpperCase() + humanChoice.slice(1).toLowerCase();
@@ -57,7 +57,7 @@ function playRound(humanChoice, computerChoice){
   }
   replayGame();
 }
-playRound(humanScore, computerScore);
+playRound(humanChoice, computerChoice);
 
 
 
@@ -69,9 +69,9 @@ function replayGame(){
   }while(replayChoice !== "yes" && replayChoice !== "no");
 
   if(replayChoice === "yes"){
-    humanScore = getHumanChoice();
-    computerScore = getComputerChoice();
-    playRound(humanScore, computerScore);
+    humanChoice = getHumanChoice();
+    computerChoice = getComputerChoice();
+    playRound(humanChoice, computerChoice);
   }else if(replayChoice == "no"){
     console.log("Game Over!");
   }
